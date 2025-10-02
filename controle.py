@@ -1,6 +1,6 @@
 from modelo import Funcionarios, Clientes, Pedidos, Produto
 
-#criação das clases responsavel pelo o controle do sistema
+#fiz a criação das clases responsavel pelo o controle do sistema
 class ControledoSistema:
     def __init__(self): #Criei listas vazias para guardar os dados
      self.clientes = []
