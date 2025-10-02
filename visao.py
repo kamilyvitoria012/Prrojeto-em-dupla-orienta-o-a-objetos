@@ -1,4 +1,4 @@
-# Importando as classes do modelo e o controlador do sistema
+# Importando as classes do modelo e o controle do sistema
 from modelo import Clientes, Pedidos, Produto
 from controle import ControledoSistema
 
