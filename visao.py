@@ -6,7 +6,7 @@ from controle import ControledoSistema
 
 def menu_clientes(sistema):
     while True:  # Loop infinito até o usuário escolher "0 - Voltar"
-        print("\n=== MENU CLIENTES ===")
+        print("\n-- MENU CLIENTES =--")
         print("1 - Cadastrar cliente")
         print("2 - Listar clientes")
         print("3 - Atualizar cliente")
@@ -15,7 +15,7 @@ def menu_clientes(sistema):
 
         opcao = input("Escolha uma opção: ")
 
-        # ---- CADASTRAR CLIENTE ----
+        # --Cadastrar o cliente---
         if opcao == "1":
             nome = input("Nome: ")
             telefone = input("Telefone: ")
@@ -25,13 +25,13 @@ def menu_clientes(sistema):
             sistema.cadastrar_cliente(cliente)  # Salva no sistema
             print(" Cliente cadastrado com sucesso!")
 
-        # ---- LISTAR CLIENTES ----
+        # ---listar cliente---
         elif opcao == "2":
             print("\n--- Clientes cadastrados ---")
             for c in sistema.lista_clientes():
                 print(c)
 
-        # ---- ATUALIZAR CLIENTE ----
+        # ---- atualizar cliente---
         elif opcao == "3":
             cpf = input("Digite o CPF do cliente para atualizar: ")
             novo_nome = input("Novo nome (Enter para manter): ")
@@ -45,7 +45,7 @@ def menu_clientes(sistema):
             )
             print(" Cliente atualizado!" if atualizado else "Cliente não encontrado.")
 
-        # ---- DELETAR CLIENTE ----
+        # ---- deletar cliente ----
         elif opcao == "4":
             cpf = input("Digite o CPF do cliente a ser deletado: ")
             if sistema.deletar_cliente(cpf):
@@ -53,9 +53,9 @@ def menu_clientes(sistema):
             else:
                 print("Cliente não encontrado.")
 
-        # ---- VOLTAR ----
+        # ---- voltar ----
         elif opcao == "0":
-            break  # Sai do submenu
+            break  # sai do submenu
 
         else:
             print(" Opção inválida.")
