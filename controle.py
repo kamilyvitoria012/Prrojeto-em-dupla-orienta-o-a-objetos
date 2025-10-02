@@ -3,14 +3,16 @@ from modelo import Funcionarios, Clientes, Pedidos, Produto
 #fiz a criação das clases responsavel pelo o controle do sistema
 class ControledoSistema:
     def __init__(self): #Criei listas vazias para guardar os dados
-     self.clientes = []
+     self.clientes = [] 
      self.funcionarios = []
      self.pedidos = []
      self.produtos = []
     
 
 #Crud
+#Creat,read,update,delete
 #Cadastrando Cliente
+ #metodos   
     def cadastrar_cliente (self, cliente):
        self.clientes.append(cliente)
     
